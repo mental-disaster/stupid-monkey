@@ -7,7 +7,15 @@ class SampleService extends GetxService {
 
   SampleService({required this.sampleRepository});
 
-  Future<TodoItem?> insertAndFind() async {
-    return await sampleRepository.insertTodoItem();
+  Future<int> create() {
+    return sampleRepository.create();
+  }
+
+  Future<List<TodoItem>> findAll() {
+    return sampleRepository.findAll();
+  }
+
+  Future<int> deleteAll() {
+    return sampleRepository.deleteAll();
   }
 }

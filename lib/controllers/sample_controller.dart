@@ -10,7 +10,15 @@ class SampleController extends GetxController {
 
   SampleController({required this.sampleService});
 
-  Future<TodoItem?> insertAndFind() {
-    return sampleService.insertAndFind();
+  Future<int> create() {
+    return sampleService.create();
+  }
+
+  Future<List<TodoItem>> findAll() {
+    return sampleService.findAll();
+  }
+
+  Future<int> deleteAll() {
+    return sampleService.deleteAll();
   }
 }
